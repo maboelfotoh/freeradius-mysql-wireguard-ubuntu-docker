@@ -1,9 +1,9 @@
-FROM ubuntu:20.04
+FROM ubuntu:20.10
 
 # Install packages
 RUN apt-get update && \
  apt-get install -y --no-install-recommends wireguard-tools iptables nano net-tools procps openresolv \
-                                            freeradius freeradius-mysql freeradius-utils mysql-client && \
+                                            freeradius freeradius-mysql freeradius-utils mysql-client iproute2 && \
  apt-get clean
 
 # Add main work dir to PATH
